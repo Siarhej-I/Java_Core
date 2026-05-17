@@ -13,16 +13,21 @@ public class Task4 {
 
         int min = 100, max = 0;
 
+        String chet = "Четные: ";
+        String neChet = "Нечетные: ";
+
         if (ch % 10 == 0) {
             System.out.println("Число не должно заканчиваться на 0");
         } else {
             while (ch > 0) {
                 int a = ch % 10;
                 if (a % 2 == 0) {
-                    System.out.println(a + " четное число");
-                } else System.out.println(a + " нечетное число");
+                    chet += a + " ";
+                } else neChet+=a+" ";
                 ch /= 10;
             }
         }
+        System.out.println(chet);
+        System.out.println(neChet);
     }
 }
